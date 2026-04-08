@@ -22,13 +22,7 @@ document.getElementById('weatherForm').addEventListener('submit', async (e) => {
         }
 
         const data = await response.json();
-        weatherResult.innerHTML = `
-            <h2>${data.name}, ${data.sys.country}</h2>
-            <p><strong>Temperature:</strong> ${data.main.temp} &deg;C</p>
-            <p><strong>Weather:</strong> ${data.weather[0].main} (${data.weather[0].description})</p>
-            <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
-            <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
-            function changeBackground(weather){
+        function changeBackground(weather){
                 if (weather === "Clear") {
                 document.body.style.backgroundImage = "url('images/sunny.png')";
                 } else if (weather === "Clouds") {
@@ -37,6 +31,13 @@ document.getElementById('weatherForm').addEventListener('submit', async (e) => {
                        document.body.style.backgroundImage = "url('images/rain.png')";
               }
           }
+        weatherResult.innerHTML = `
+            <h2>${data.name}, ${data.sys.country}</h2>
+            <p><strong>Temperature:</strong> ${data.main.temp} &deg;C</p>
+            <p><strong>Weather:</strong> ${data.weather[0].main} (${data.weather[0].description})</p>
+            <p><strong>Humidity:</strong> ${data.main.humidity}%</p>
+            <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
+            
         `;
         } catch (error) {
         weatherResult.textContent = "Error fetching weather data. Please try again.";
