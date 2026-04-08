@@ -30,11 +30,11 @@ document.getElementById('weatherForm').addEventListener('submit', async (e) => {
             <p><strong>Wind Speed:</strong> ${data.wind.speed} m/s</p>
             function changeBackground(weather){
                 if (weather === "Clear") {
-                document.body.style.backgroundImage = "url('images/sunny.jpg')";
+                document.body.style.backgroundImage = "url('images/sunny.png')";
                 } else if (weather === "Clouds") {
-                        document.body.style.backgroundImage = "url('images/cloudy.jpg')";
+                        document.body.style.backgroundImage = "url('images/cloudy.png')";
                 } else if (weather === "Rain") {
-                       document.body.style.backgroundImage = "url('images/rain.jpg')";
+                       document.body.style.backgroundImage = "url('images/rain.png')";
               }
           }
         `;
