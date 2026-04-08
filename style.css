@@ -3,12 +3,18 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin:0;
+
 }
 .weather-dashboard {
-    background:orange;
-    padding: 2em 2.5em 2em 2.5em;
+    background:rgb(119, 197, 225);
+    padding: 25px;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(60,60,120,0.15);
+    box-shadow: 0 4px 20px rgba(235, 9, 9, 0.15);
     width: 350px;
     text-align: center;
 }
@@ -38,3 +44,8 @@ button {
     font-size: 1.1em;
 
 }
+.weatherForm {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}   
